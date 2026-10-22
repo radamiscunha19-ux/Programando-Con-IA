@@ -6,12 +6,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Programando com IA">
   <title>Programando com IA</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172033;
+      background: #f3f6fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(ellipse at top left, rgb(219 234 254 / 65%), transparent 38rem),
+        #f3f6fb;
+    }
+
+    main {
+      width: min(100% - 48px, 1440px);
+      margin: 0 auto;
+      padding: clamp(40px, 7vw, 88px) 0;
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      color: #14213d;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      letter-spacing: -0.045em;
+      line-height: 1.15;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      border: 1px solid #e1e7f0;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 18px 45px rgb(31 48 78 / 9%);
+      scrollbar-color: #aab8cc #edf1f7;
+    }
+
+    table {
+      width: 100%;
+      min-width: 960px;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    thead {
+      color: #fff;
+      background: #22345b;
+    }
+
+    th,
+    td {
+      padding: 16px 18px;
+      border-bottom: 1px solid #e8edf4;
+      vertical-align: middle;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      min-width: 88px;
+      font-size: 0.76rem;
+      font-weight: 650;
+      letter-spacing: 0.035em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    thead th:first-child {
+      min-width: 150px;
+      border-top-left-radius: 15px;
+    }
+
+    thead th:last-child {
+      border-top-right-radius: 15px;
+    }
+
+    tbody th[scope="row"] {
+      color: #22345b;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    tbody td:not(:last-child) {
+      color: #34415a;
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f7f9fc;
+    }
+
+    tbody tr {
+      transition: background-color 150ms ease;
+    }
+
+    tbody tr:hover {
+      background: #edf4ff;
+    }
+
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: min(100% - 28px, 1440px);
+        padding: 36px 0;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        padding: 13px 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <main>
     <h1>Programando com IA</h1>
-    <table>
+    <div class="table-container">
+      <table>
       <thead>
         <tr>
           <th scope="col">Herramienta</th>
@@ -124,7 +265,8 @@
           <td>5</td>
         </tr>
       </tbody>
-    </table>
+      </table>
+    </div>
   </main>
 </body>
 
